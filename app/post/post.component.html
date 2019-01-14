@@ -1,0 +1,13 @@
+<li [ngClass]="{'list-group-item': true,
+
+                'list-group-item-success': getColor() === 'green',
+
+                'list-group-item-danger': getColor() === 'red'}">
+
+<div style = "font-size:20px; font-weight:bold; position:relative; float:left;">  {{ articleTitle }} </div> <div style = "position:relative; float:right;"> {{ articleCreated| date: 'short'}}</div>
+  <h4> <br> {{ articleContent }} </h4>
+  <button class="btn btn-success"
+         (click)="love()">LoveIt !</button>
+  <button class="btn btn-danger"
+        (click)="dontLove()">Don't love !</button>
+</li>
